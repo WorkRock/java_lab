@@ -1,6 +1,7 @@
-package lab6_2;
+﻿package lab6_2;
 
 /*
+ github test
  * 파일명: MyDoublyLinkedList.java
  * 작성자: 201632023 이지훈
  * 작성일: 2017년 9월 21일
