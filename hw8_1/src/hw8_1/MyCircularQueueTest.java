@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MyCircularQueueTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		MyCircularQueue queue = new MyCircularQueue(5);
 		int menu = 0;

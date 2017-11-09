@@ -22,9 +22,9 @@ public class MyCircularQueue {
 		return count == capacity;
 	}
 	
-	public void enQueue(int item) {
+	public void enQueue(int item) throws Exception{
 		if(isFull())
-			System.out.println("ø°∑Ø! ∞°µÊ√°Ωø¥Ÿ!");
+			throw new Exception("ø°∑Ø! ≈•∞° ∞°µÊ√°Ω¿¥œ¥Ÿ!");
 		else {
 			rear = (rear + 1) % capacity;
 			array[rear] = item;
