@@ -9,34 +9,34 @@ public class MyCircularQueueTest {
 		MyCircularQueue queue = new MyCircularQueue(5);
 		int menu = 0;
 		int item = 0;
-		System.out.println("hw8_1 : ì´ì§€í›ˆ");
+		System.out.println("hw8_1 : ÀÌÁöÈÆ");
 		Scanner scan = new Scanner(System.in);
 		do {
-			System.out.print("1:ì‚½ì… 2:ì‚­ì œ 3:ì „ì²´ì‚­ì œ 4:ì¢…ë£Œ --->");
+			System.out.print("1:»ğÀÔ 2:»èÁ¦ 3:ÀüÃ¼»èÁ¦ 4:Á¾·á --->");
 			menu = scan.nextInt();
 			switch(menu) {
 			case 1:
-				System.out.println("ì‚½ì…ì„ ìˆ˜í–‰í•©ë‹ˆë‹¤.");
-				System.out.print("ì‚½ì…í•  ì›ì†Œ ì…ë ¥:");
+				System.out.println("»ğÀÔÀ» ¼öÇàÇÕ´Ï´Ù.");
+				System.out.print("»ğÀÔÇÒ ¿ø¼Ò ÀÔ·Â:");
 				scan.nextLine();
 				item = scan.nextInt();
 				queue.enQueue(item);
 				break;
 			case 2:
-				System.out.println("ì‚­ì œë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.");
-				System.out.println("ì‚­ì œí•œ ì›ì†Œ = " + queue.deQueue());
+				System.out.println("»èÁ¦¸¦ ¼öÇàÇÕ´Ï´Ù.");
+				System.out.println("»èÁ¦ÇÑ ¿ø¼Ò = " + queue.deQueue());
 				break;
 			case 3:
-				System.out.println("ì „ì²´ì‚­ì œë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.");
+				System.out.println("ÀüÃ¼»èÁ¦¸¦ ¼öÇàÇÕ´Ï´Ù.");
 				while(!queue.isEmpty()) {
-					System.out.println("ì‚­ì œí•œ ì›ì†Œ : " + queue.deQueue());
+					System.out.println("»èÁ¦ÇÑ ¿ø¼Ò : " + queue.deQueue());
 				}
 				break;
 			case 4:
-				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
+				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
 				break;
 			default:
-				System.out.println("ë©”ë‰´ ë²ˆí˜¸ ì˜¤ë¥˜: ë©”ë‰´ë¥¼ ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”.");
+				System.out.println("¸Ş´º ¹øÈ£ ¿À·ù: ¸Ş´º¸¦ ´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä.");
 			}
 		} while(menu != 4);
 	}

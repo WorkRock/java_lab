@@ -24,7 +24,7 @@ public class MyCircularQueue {
 	
 	public void enQueue(int item) {
 		if(isFull())
-			System.out.println("ì—ëŸ¬! ê°€ë“ì°¼ìŠ´ë‹¤!");
+			System.out.println("¿¡·¯! °¡µæÃ¡½¿´Ù!");
 		else {
 			rear = (rear + 1) % capacity;
 			array[rear] = item;
@@ -34,7 +34,7 @@ public class MyCircularQueue {
 	
 	public int deQueue() throws NoSuchElementException{
 		if(isEmpty())
-			throw new NoSuchElementException("ì—ëŸ¬! íê°€ ë¹„ì–´ìˆìŠµë‹ˆë‹¤!");
+			throw new NoSuchElementException("¿¡·¯! Å¥°¡ ºñ¾îÀÖ½À´Ï´Ù!");
 		else {
 			front = (front + 1) % capacity;
 			int item = array[front];
