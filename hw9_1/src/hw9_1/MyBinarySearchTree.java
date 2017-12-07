@@ -83,7 +83,7 @@ class MyBinarySearchTree {
 		}
 	}
 
-	
+
 	// (4) 검색 - 트리에 key가 존재하는 지 여부를 리턴하는 메소드  
 	public boolean contains(int key) {
 		return contains(root, key);
@@ -111,7 +111,7 @@ class MyBinarySearchTree {
 		}
 	}
 
-	
+
 	public int max(){
 		return max(root);
 	}
@@ -129,21 +129,21 @@ class MyBinarySearchTree {
 				return p.key;// 공백 트리가 아닌 경우, 최대 키 값을 찾아 리턴
 		}
 	}
-	
+
 	// (6) 삽입  - 트리에 key를 삽입하고, 삽입 실패 여부를 리턴하는 메소드 (반복 알고리즘)
 	public boolean add(int key) {
 		if(root==null) {
 			root = new Node(key);
 			return true;
 		}
-		
+
 		Node tmp = root;
-		
+
 		while(true) {
 			if(tmp.key == key) {
 				return false;
 			}
-			
+
 			else if(key < tmp.key) {
 				if(tmp.leftChild == null) {
 					tmp.leftChild = new Node(key);
@@ -160,5 +160,4 @@ class MyBinarySearchTree {
 			}
 		}
 	}
-
 }
