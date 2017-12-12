@@ -1,17 +1,17 @@
-package hw10_2;
+package hw10_3;
 
 /* 
- * 파일명: MatrixGraphTest.java
- * 작성일: 2017.12.07
+ * 파일명: ListGraphTest.java
+ * 작성일: 2017.12.08.
  * 작성자: 201632023 이지훈
  * 설명: 무방향 그래프를 생성하고 연산을 수행하는 프로그램 
  */
 
 import java.util.Scanner;
 
-public class MatrixGraphTest { 
+public class ListGraphTest { 
 	public static void main(String[] args) { 
-		System.out.println("hw10_2 : 이지훈");
+		System.out.println("hw10_3 : 이지훈");
 
 		// 정점 수 n 입력
 		Scanner scan = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class MatrixGraphTest {
 		int n = scan.nextInt();
 
 		// 정점 수가 n인 무방향 그래프를 생성
-		MatrixGraph graph = new MatrixGraph(n);
+		ListGraph graph = new ListGraph(n);
 
 		System.out.println("\n메뉴 번호를 입력하세요.");
 		int menu = 0;

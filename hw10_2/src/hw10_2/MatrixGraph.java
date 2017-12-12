@@ -1,12 +1,22 @@
 package hw10_2;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class MatrixGraph {
 	private int[][] matrix;
 	private int n;
-	
+
+	private boolean[] visitedDfs;
+	private boolean[] visitedBfs;
+
+	Queue<Integer> queue = new <Integer>LinkedList();
+
 	public MatrixGraph(int n) {
 		matrix = new int[n][n];
 		this.n = n;
+		visitedDfs = new boolean[n];
+		visitedBfs = new boolean[n];
 	}
 
 	public void addEdge(int v1, int v2) {
@@ -33,8 +43,64 @@ public class MatrixGraph {
 			}
 		}
 	}
-	
-	public void depthFirstSearch() {
-		
+
+	private void dfs(int i) {
+		visitedDfs[i] = true;
+
+		System.out.print(i + " ");
+
+		for(int j = 0; j < n; j++) {
+			if(matrix[i][j] == 1 && visitedDfs[j] != true)
+				dfs(j);
+		}
 	}
+
+	public void depthFirstSearch()
+	{
+		for (int i = 0; i < n; i++) {
+			visitedDfs[i] = false;
+		}
+
+		dfs(0);
+
+		for (int i = 0; i < n; i++) {
+			if(visitedDfs[i] != true) {
+				System.out.print(i + " ");
+			}
+		}	
+	}
+
+	private void bfs(int i) {
+		visitedBfs[i] = true;
+
+		queue.offer(i);
+		
+		while(!queue.isEmpty()){
+			int item = queue.poll();
+
+			System.out.print(item + " ");
+
+			for(int j =0; j < n; j++){
+				if(matrix[item][j] == 1 && visitedBfs[j] == false){
+					queue.offer(j);
+					visitedBfs[j] = true;
+				}
+			}
+		}
+	}
+
+	public void breadthFirstSearch() {
+		for (int i = 0; i < n; i++){
+			visitedBfs[i] = false;
+		}
+
+		bfs(0);
+
+		for (int i = 0; i < n; i++) {
+			if(visitedBfs[i] != true) {
+				System.out.print(i + " ");
+			}
+		}
+	}
+
 }
