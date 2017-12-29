@@ -50,7 +50,7 @@ public class Main {
 			System.out.println("검색 성공 : 인덱스 = " + index2);
 
 		// 문제(3):  순차 검색, 이진 검색 결과가 다르게 나오는 경우가 있는지, 있다면 어떤 경우인지 출력하세요.
-		System.out.println("같은값이 두개 이상일");
+		System.out.println("같은값이 두개 이상일때");
 	}
 
 	// 문제(1): 순차 검색 메소드 - array 전체에서 key를 검색하여 인덱스를 리턴; 검색 실패시 -1 리턴 
@@ -73,10 +73,10 @@ public class Main {
 				return middle;
 			}
 			else if(key > array[middle]) {
-				lb++;
+				lb = middle + 1;;
 			}
 			else
-				ub--;
+				ub = middle - 1;
 		}
 		return -1;
 	}
